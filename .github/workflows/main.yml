@@ -41,7 +41,7 @@ jobs:
 
       - name: Build, tag, and push Docker image
         env:
-          ECR_REGISTRY: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.us-west-2.amazonaws.com
+          ECR_REGISTRY: 248189934683.dkr.ecr.us-west-2.amazonaws.com
           ECR_REPOSITORY: my-python-api-repo
           IMAGE_TAG: latest
         run: |
