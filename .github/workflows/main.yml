@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read
 
 jobs:
   build-and-deploy:
@@ -12,6 +15,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
         with:
+          role-to-assume: arn:aws:iam::248189934683:role/git-access
           aws-region: us-west-2
 
       - name: Checkout repository
