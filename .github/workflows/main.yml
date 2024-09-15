@@ -15,7 +15,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
         with:
-          role-to-assume: arn:aws:iam::248189934683:role/git-access
+          role-to-assume: arn:aws:iam::248189934683:role/github-access
           aws-region: us-west-2
 
       - name: Checkout repository
